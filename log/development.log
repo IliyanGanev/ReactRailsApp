@@ -1,0 +1,179 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20171202022811)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171202022811"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-02 02:33:38.673269"], ["updated_at", "2017-12-02 02:33:38.673269"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.532597"], ["updated_at", "2017-12-02 02:34:42.532597"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.537763"], ["updated_at", "2017-12-02 02:34:42.537763"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.542047"], ["updated_at", "2017-12-02 02:34:42.542047"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.547886"], ["updated_at", "2017-12-02 02:34:42.547886"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.552416"], ["updated_at", "2017-12-02 02:34:42.552416"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.557269"], ["updated_at", "2017-12-02 02:34:42.557269"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.562056"], ["updated_at", "2017-12-02 02:34:42.562056"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.566621"], ["updated_at", "2017-12-02 02:34:42.566621"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.571000"], ["updated_at", "2017-12-02 02:34:42.571000"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 02:34:42.575682"], ["updated_at", "2017-12-02 02:34:42.575682"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-12-01 18:35:09 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/botilko/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/botilko/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (6.8ms)
+Completed 200 OK in 33ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-01 19:44:13 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/botilko/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/botilko/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (6.9ms)
+Completed 200 OK in 33ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 19:44:31 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 19:45:12 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-12-01 19:45:18 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/botilko/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/botilko/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 19:45:54 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.558061"], ["updated_at", "2017-12-02 03:46:18.558061"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.563881"], ["updated_at", "2017-12-02 03:46:18.563881"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.567278"], ["updated_at", "2017-12-02 03:46:18.567278"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.570589"], ["updated_at", "2017-12-02 03:46:18.570589"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.573651"], ["updated_at", "2017-12-02 03:46:18.573651"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.576116"], ["updated_at", "2017-12-02 03:46:18.576116"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.579465"], ["updated_at", "2017-12-02 03:46:18.579465"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.582672"], ["updated_at", "2017-12-02 03:46:18.582672"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.585687"], ["updated_at", "2017-12-02 03:46:18.585687"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Item"], ["description", "I am a description."], ["created_at", "2017-12-02 03:46:18.588844"], ["updated_at", "2017-12-02 03:46:18.588844"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 19:49:42 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `v1' for Api:Module):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 19:56:03 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 19:58:40 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 19:59:45 -0800
+  
+SyntaxError (/Users/botilko/React/ReactRailsApp/config/routes.rb:4: unknown regexp options - www
+/Users/botilko/React/ReactRailsApp/config/routes.rb:4: syntax error, unexpected keyword_and
+...a-crud-interface-with-react-and-ruby-on-rails#bWBc18Rigt2bPg...
+...                               ^):
+  
+config/routes.rb:4: unknown regexp options - www
+config/routes.rb:4: syntax error, unexpected keyword_and
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 20:00:10 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 20:02:06 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 20:03:00 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 20:04:05 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 20:04:21 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController):
+  
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 20:08:56 -0800
+  
+SyntaxError (/Users/botilko/React/ReactRailsApp/app/controllers/api/v1/base_controller.rb:3: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/api/v1/base_controller.rb:3: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/api/v1/items_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-01 20:09:19 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 23ms (Views: 16.6ms | ActiveRecord: 1.4ms)
+
+
