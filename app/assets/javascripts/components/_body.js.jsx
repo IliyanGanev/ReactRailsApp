@@ -1,8 +1,8 @@
-var Body = React.createClass({
-	render() {
+var Body = createReactClass({
+	render:function() {
 		return (
 			<div>
-				<NewItem />
+				
 				<AllItems />
 			</div>
 			)

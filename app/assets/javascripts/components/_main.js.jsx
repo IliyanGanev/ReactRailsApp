@@ -1,5 +1,5 @@
-var Main = React.createClass({
-	render() {
+var Main = createReactClass({
+	render: function() {
 		return (
 			<div>
 				<Header />

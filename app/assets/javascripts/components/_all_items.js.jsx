@@ -1,4 +1,4 @@
-var AllItems = React.createClass({
+var AllItems = createReactClass({
 	getInitialState() {
 		return { items: []}
 	},
@@ -7,7 +7,7 @@ var AllItems = React.createClass({
   	$.getJSON('/api/v1/items.json', (response) => { this.setState({ items: response }) });
 	}, 
 
-	render() {
+	render: function() {
 		var items = this.state.items.map((item) => {
  			return ( 
  				<div key={item.id}> 

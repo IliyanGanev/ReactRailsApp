@@ -1,5 +1,5 @@
-var Header = React.createClass({
-	render() {
+var Header = createReactClass({
+	render: function() {
 		return (
 			<div>
 				<h1>Hello, World!</h1>
