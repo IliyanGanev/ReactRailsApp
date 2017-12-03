@@ -3,13 +3,14 @@ var NewItem = createReactClass({
 	handleClick() {
 		var name = this.nameInput.value;
 		var description = this.descriptionInput.value;
-		console.log(name, description)
+		
 		$.ajax({
 			url: '/api/v1/items',
 			type: 'POST',
 			data: { item: { name: name, description: description}},
-			success: (response) => {
-				console.log('it worked!', response);
+			success: (item) => {
+				this.props.handleSubmit(item);
+				
 			}
 		});
 	},

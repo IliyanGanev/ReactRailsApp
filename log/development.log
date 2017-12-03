@@ -836,3 +836,50 @@ Can't verify CSRF token authenticity.
 Completed 201 Created in 18ms (Views: 4.3ms | ActiveRecord: 4.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-02 22:37:32 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2312ms (Views: 2302.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-02 22:37:35 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 42ms (Views: 21.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2017-12-02 23:08:09 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"ss", "description"=>"ss"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "ss"], ["description", "ss"], ["created_at", "2017-12-03 07:08:09.886224"], ["updated_at", "2017-12-03 07:08:09.886224"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 23ms (Views: 2.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-02 23:11:43 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2587ms (Views: 2585.2ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-02 23:11:46 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 33ms (Views: 24.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2017-12-02 23:11:52 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"q", "description"=>"q"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "q"], ["description", "q"], ["created_at", "2017-12-03 07:11:52.690616"], ["updated_at", "2017-12-03 07:11:52.690616"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 13ms (Views: 2.1ms | ActiveRecord: 2.0ms)
+
+
