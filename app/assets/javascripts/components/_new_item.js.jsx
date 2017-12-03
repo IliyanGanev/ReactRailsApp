@@ -8,8 +8,8 @@ var NewItem = createReactClass({
 	render: function() {
 		return (
 			<div>
-				<input ref='name' placeholder='Enter name' />
-				<input ref='description' placeholder='Enter a desc' />
+				<input  placeholder='Enter name' />
+				<input  placeholder='Enter a desc' />
 				<button onClick={this.handleClick}>Submit</button>
 			</div>
 		)
