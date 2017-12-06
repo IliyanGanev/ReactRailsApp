@@ -36,11 +36,17 @@ var Body = createReactClass({
 			type: 'PUT',
 			data: { item: item },
 			success: () => {
-				console.log('you did it');
+				this.updateItems(item);
 			}
 		});
 	},
 	
+	updateItems(item) {
+		var items = this.state.items.filter((i) => {return i.id != item.id});
+		items.push(item);
+
+		this.setState({items: items});
+	},
 
 	render:function() {
 		return (
