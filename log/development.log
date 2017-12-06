@@ -1303,3 +1303,191 @@ Processing by Api::V1::ItemsController#index as JSON
 Completed 200 OK in 24ms (Views: 9.6ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:42:12 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 2480ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (44:1)
+  42 | 	}
+  43 | 
+> 44 | 	render:function() {
+     |  ^
+  45 | 		return (
+  46 | 			<div>
+  47 | 				<NewItem handleSubmit={this.handleSubmit} />):
+    4:     <title>ReactRailsApp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3970707319701817223_70295462010840'
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:43:15 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 724ms
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (42:2)
+  40 | 			}
+  41 | 		}
+> 42 | 		});
+     |   ^
+  43 | 	
+  44 | 
+  45 | 	render:function() {):
+    4:     <title>ReactRailsApp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3970707319701817223_70295496053100'
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:43:54 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2166ms (Views: 2164.5ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 21:43:56 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 31ms (Views: 16.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:47:01 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1039ms (Views: 1037.5ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 21:47:03 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 20ms (Views: 12.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:54:13 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1082ms (Views: 1079.6ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 21:54:15 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 22:01:37 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1107ms (Views: 1105.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 22:01:39 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 29ms (Views: 15.8ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/api/v1/items/undefined" for 127.0.0.1 at 2017-12-05 22:01:44 -0800
+Processing by Api::V1::ItemsController#update as */*
+  Parameters: {"item"=>{"name"=>"Itemxcv", "description"=>"I am a description.xcv"}, "id"=>"undefined"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=undefined):
+  
+app/controllers/api/v1/items_controller.rb:15:in `update'
+Started GET "/" for 127.0.0.1 at 2017-12-05 22:11:04 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 753ms
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected token (38:10)
+  36 | 			type: 'PUT',
+  37 | 			data: { item: item },
+> 38 | 			console.log('you did it');
+     |           ^
+  39 | 			success: () => {
+  40 | 				console.log('you did it');
+  41 | 			}):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3970707319701817223_70295517168200'
+Started GET "/" for 127.0.0.1 at 2017-12-05 22:13:43 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1087ms (Views: 1084.7ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 22:13:44 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 27ms (Views: 15.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 22:27:12 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1069ms (Views: 1066.8ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 22:27:14 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 29ms (Views: 15.1ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/v1/items/5" for 127.0.0.1 at 2017-12-05 22:27:17 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"5"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 11ms (ActiveRecord: 2.8ms)
+
+
+Started PUT "/api/v1/items/4" for 127.0.0.1 at 2017-12-05 22:27:21 -0800
+Processing by Api::V1::ItemsController#update as */*
+  Parameters: {"item"=>{"id"=>"4", "name"=>"Itemsdf", "description"=>"I am a descriptisdfon."}, "id"=>"4"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "items" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "Itemsdf"], ["description", "I am a descriptisdfon."], ["updated_at", "2017-12-06 06:27:21.575915"], ["id", 4]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 2.3ms)
+
+

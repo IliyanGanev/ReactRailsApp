@@ -8,7 +8,9 @@ var Item = createReactClass({
 		if(this.state.editable) {
 			var name = this.nameInput.value;
 			var description = this.descriptionInput.value;
-			console.log('in handleEdit', this.state.editable, name, description);
+			var id = this.props.item.id;
+			var item = {id:id, name: name, description: description};
+			this.props.handleUpdate(item);
 		}
 		this.setState({ editable: !this.state.editable })
 	},
