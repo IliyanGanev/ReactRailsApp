@@ -1103,3 +1103,203 @@ Can't verify CSRF token authenticity.
 Completed 204 No Content in 11ms (ActiveRecord: 3.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-05 17:11:17 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 722ms (Views: 708.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 17:11:18 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 31ms (Views: 20.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:18:02 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2559ms (Views: 2557.4ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 20:18:15 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/api/v1/items/14" for 127.0.0.1 at 2017-12-05 20:19:13 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"14"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 14]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 12ms (ActiveRecord: 2.5ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2017-12-05 20:19:23 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"blah ", "description"=>"blah"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "blah "], ["description", "blah"], ["created_at", "2017-12-06 04:19:23.245549"], ["updated_at", "2017-12-06 04:19:23.245549"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 11ms (Views: 2.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:33:08 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 996ms (Views: 994.3ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 20:33:09 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 23ms (Views: 11.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:53:13 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1072ms (Views: 1069.6ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 20:53:15 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 27ms (Views: 15.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/api/v1/items/1" for 127.0.0.1 at 2017-12-05 20:53:35 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 12ms (ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/v1/items/3" for 127.0.0.1 at 2017-12-05 20:53:49 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"3"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:54:03 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 20:54:04 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:54:09 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 20:54:09 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:56:20 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 20:56:20 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 20:58:27 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1169ms (Views: 1167.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 20:58:28 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 31ms (Views: 18.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:00:30 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1159ms (Views: 1157.4ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 21:00:31 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 21ms (Views: 10.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:05:36 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1028ms (Views: 1025.9ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 21:05:37 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 23ms (Views: 14.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:07:18 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1013ms (Views: 1011.5ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 21:07:19 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 22ms (Views: 10.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-05 21:08:21 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1108ms (Views: 1105.7ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2017-12-05 21:08:23 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 24ms (Views: 9.6ms | ActiveRecord: 1.0ms)
+
+

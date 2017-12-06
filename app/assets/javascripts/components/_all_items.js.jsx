@@ -4,13 +4,15 @@ var AllItems = createReactClass({
 		this.props.handleDelete(id);
 	},
 
+
+
 	render: function() {
 		var items = this.props.items.map((item) => {
  			return ( 
- 				<div key={item.id}> 
- 					<h3>{item.name}</h3> 
- 					<p>{item.description}</p>
- 					<button onClick={this.handleDelete.bind(this, item.id)} >Delete</button>
+ 				<div key={item.id}>
+ 					<Item item={item}
+ 						handleDelete={this.handleDelete.bind(this, item.id)}
+ 						handleEdit={this.handleEdit}/>
  				</div> 
  			)
  		});
