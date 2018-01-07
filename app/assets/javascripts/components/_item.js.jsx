@@ -15,6 +15,10 @@ var Item = createReactClass({
 		this.setState({ editable: !this.state.editable })
 	},
 
+	handleDelete (){
+this.props.handleDelete();
+	},
+
 
 	render(){
 		var name = this.state.editable? <input type='text' ref={input => { this.nameInput = input;}} defaultValue={this.props.item.name} /> : <h3>{this.props.item.name}</h3> 
@@ -23,7 +27,8 @@ var Item = createReactClass({
 			<div>
 				{name}
 				{description}
- 				<button onClick={this.props.handleDelete} >Delete</button>
+ 			
+ 				<button onClick={() => this.handleDelete()}>Delete</button>
  				<button onClick={this.handleEdit}> {this.state.editable? 'Submit' : 'Edit'} </button>
 			</div>
 		)

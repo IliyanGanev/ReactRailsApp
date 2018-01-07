@@ -1538,3 +1538,501 @@ Can't verify CSRF token authenticity.
 Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-04 20:24:37 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 550ms (Views: 538.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-04 20:24:39 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 30ms (Views: 14.9ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/api/v1/items/2" for 127.0.0.1 at 2018-01-04 20:25:09 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"2"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 14ms (ActiveRecord: 5.1ms)
+
+
+Started DELETE "/api/v1/items/6" for 127.0.0.1 at 2018-01-04 20:25:13 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"6"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 8ms (ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/v1/items/7" for 127.0.0.1 at 2018-01-04 20:25:14 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"7"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 10ms (ActiveRecord: 2.4ms)
+
+
+Started DELETE "/api/v1/items/8" for 127.0.0.1 at 2018-01-04 20:25:15 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"8"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 2.3ms)
+
+
+Started PUT "/api/v1/items/9" for 127.0.0.1 at 2018-01-04 20:25:34 -0800
+Processing by Api::V1::ItemsController#update as */*
+  Parameters: {"item"=>{"id"=>"9", "name"=>"Itemche", "description"=>"I am a description."}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "items" SET "name" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "Itemche"], ["updated_at", "2018-01-05 04:25:34.539468"], ["id", 9]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 20:10:50 -0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 507ms (Views: 494.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 20:10:51 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 71ms (Views: 57.0ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/v1/items/9" for 127.0.0.1 at 2018-01-06 20:10:54 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:04:25 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 366ms (Views: 356.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:04:25 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 38ms (Views: 13.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:04:43 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"hello", "description"=>"blah"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hello"], ["description", "blah"], ["created_at", "2018-01-07 05:04:43.824577"], ["updated_at", "2018-01-07 05:04:43.824577"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 20ms (Views: 5.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:07:43 -0800
+Started DELETE "/api/v1/items/10" for 127.0.0.1 at 2018-01-06 21:07:53 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1943ms (Views: 1941.1ms)
+
+
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"10"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Started DELETE "/api/v1/items/10" for 127.0.0.1 at 2018-01-06 21:07:55 -0800
+Started DELETE "/api/v1/items/10" for 127.0.0.1 at 2018-01-06 21:07:55 -0800
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by Api::V1::ItemsController#destroy as */*
+Processing by Api::V1::ItemsController#destroy as */*
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 10]]
+  Parameters: {"id"=>"10"}
+  Parameters: {"id"=>"10"}
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Can't verify CSRF token authenticity.
+Can't verify CSRF token authenticity.
+Completed 204 No Content in 71ms (ActiveRecord: 4.2ms)
+
+
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 404 Not Found in 24ms (ActiveRecord: 0.4ms)
+
+
+Completed 404 Not Found in 23ms (ActiveRecord: 0.4ms)
+
+
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=10):
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=10):
+  
+  
+app/controllers/api/v1/items_controller.rb:11:in `destroy'
+app/controllers/api/v1/items_controller.rb:11:in `destroy'
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:07:56 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:08:55 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1068ms (Views: 1066.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:08:56 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 28ms (Views: 19.7ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/api/v1/items/16" for 127.0.0.1 at 2018-01-06 21:08:58 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"16"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 16]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 11ms (ActiveRecord: 2.6ms)
+
+
+Started DELETE "/api/v1/items/15" for 127.0.0.1 at 2018-01-06 21:09:03 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"15"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:09:05 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:09:06 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:09:15 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"sadf", "description"=>"asdf"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "sadf"], ["description", "asdf"], ["created_at", "2018-01-07 05:09:15.247990"], ["updated_at", "2018-01-07 05:09:15.247990"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 10ms (Views: 1.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:09:18 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"saasdfdf", "description"=>"asasdfdf"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "saasdfdf"], ["description", "asasdfdf"], ["created_at", "2018-01-07 05:09:18.312737"], ["updated_at", "2018-01-07 05:09:18.312737"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 10ms (Views: 0.5ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/api/v1/items/17" for 127.0.0.1 at 2018-01-06 21:09:34 -0800
+Processing by Api::V1::ItemsController#update as */*
+  Parameters: {"item"=>{"id"=>"17", "name"=>"sadf", "description"=>"asdf"}, "id"=>"17"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/v1/items/17" for 127.0.0.1 at 2018-01-06 21:09:35 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"17"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 17]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:10:35 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1009ms (Views: 1006.3ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:10:36 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 21ms (Views: 12.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:10:56 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1088ms (Views: 1086.6ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:10:58 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 24ms (Views: 14.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:11:29 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1033ms (Views: 1030.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:11:31 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 39ms (Views: 30.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:12:50 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1113ms (Views: 1111.8ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:12:52 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:13:07 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1125ms (Views: 1123.2ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:13:09 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/v1/items/18" for 127.0.0.1 at 2018-01-06 21:13:10 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"18"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 18]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 2.3ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:13:35 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"sadf", "description"=>"asdf"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "sadf"], ["description", "asdf"], ["created_at", "2018-01-07 05:13:35.660685"], ["updated_at", "2018-01-07 05:13:35.660685"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 10ms (Views: 0.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:13:39 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"sadfasdf", "description"=>"asdfsadf"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "sadfasdf"], ["description", "asdfsadf"], ["created_at", "2018-01-07 05:13:39.105915"], ["updated_at", "2018-01-07 05:13:39.105915"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 9ms (Views: 0.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:14:42 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1105ms (Views: 1102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:14:43 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 27ms (Views: 17.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:15:23 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:15:23 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/api/v1/items/19" for 127.0.0.1 at 2018-01-06 21:15:25 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"19"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 19]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/v1/items/20" for 127.0.0.1 at 2018-01-06 21:15:26 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"20"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 8ms (ActiveRecord: 2.1ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:15:29 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"asdf", "description"=>"asdf"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdf"], ["description", "asdf"], ["created_at", "2018-01-07 05:15:29.451434"], ["updated_at", "2018-01-07 05:15:29.451434"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 10ms (Views: 0.9ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:15:31 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"asdfasdf", "description"=>"asdfasdf"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdfasdf"], ["description", "asdfasdf"], ["created_at", "2018-01-07 05:15:31.999188"], ["updated_at", "2018-01-07 05:15:31.999188"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 9ms (Views: 0.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:17:15 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 32.7ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:17:15 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 18ms (Views: 10.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/api/v1/items/21" for 127.0.0.1 at 2018-01-06 21:17:18 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"21"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 21]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-06 21:17:36 -0800
+Processing by SiteController#index as HTML
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/items.json" for 127.0.0.1 at 2018-01-06 21:17:37 -0800
+Processing by Api::V1::ItemsController#index as JSON
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:17:39 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"asdf", "description"=>"asdf"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdf"], ["description", "asdf"], ["created_at", "2018-01-07 05:17:39.271459"], ["updated_at", "2018-01-07 05:17:39.271459"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 10ms (Views: 0.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/v1/items" for 127.0.0.1 at 2018-01-06 21:17:41 -0800
+Processing by Api::V1::ItemsController#create as */*
+  Parameters: {"item"=>{"name"=>"asfasdf", "description"=>"asasdfdf"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asfasdf"], ["description", "asasdfdf"], ["created_at", "2018-01-07 05:17:41.622558"], ["updated_at", "2018-01-07 05:17:41.622558"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 9ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/api/v1/items/24" for 127.0.0.1 at 2018-01-06 21:17:43 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"24"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 24]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 10ms (ActiveRecord: 2.5ms)
+
+
+Started DELETE "/api/v1/items/23" for 127.0.0.1 at 2018-01-06 21:17:44 -0800
+Processing by Api::V1::ItemsController#destroy as */*
+  Parameters: {"id"=>"23"}
+Can't verify CSRF token authenticity.
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 23]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 9ms (ActiveRecord: 2.1ms)
+
+
